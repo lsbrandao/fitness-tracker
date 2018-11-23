@@ -24,6 +24,7 @@ import { StopTrainingComponent } from './training/current-training/stop-training
 import { AuthService } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
 import { environment } from '../environments/environment';
+import { UIService } from './shared/ui.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { environment } from '../environments/environment';
   ],
   providers: [
     AuthService,
-    TrainingService
+    TrainingService,
+    UIService
   ],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent]
