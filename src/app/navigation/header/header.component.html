@@ -4,13 +4,17 @@
           <mat-icon>menu</mat-icon>
       </button>
   </div>
-  <div><a [routerLink]="[ '' ]">Fitness</a></div>
+  <div id="logo"><a [routerLink]="[ '' ]">FITNESS TRACKER</a></div>
   <div fxFlex fxLayout="row" fxLayoutAlign="end">
       <ul fxLayout="row" fxLayoutGap="10px" class="navigation-items" fxHide.xs>
-          <li *ngIf="!(isAuth$ | async)"><a [routerLink]="[ '/signup' ]">Signup</a></li>
+          <li><a [routerLink]="[ '/training' ]">Training</a></li>
+          <li><a [routerLink]="[ '/signup' ]">Signup</a></li>
+          <li><a [routerLink]="[ '/login' ]">Login</a></li>
+          <li><a style="cursor: pointer" (click)="onLogout()">Logout</a></li>
+          <!-- <li *ngIf="!(isAuth$ | async)"><a [routerLink]="[ '/signup' ]">Signup</a></li>
           <li *ngIf="!(isAuth$ | async)"><a [routerLink]="[ '/login' ]">Login</a></li>
           <li *ngIf="isAuth$ | async"><a [routerLink]="[ '/training' ]">Training</a></li>
-          <li *ngIf="isAuth$ | async"><a style="cursor: pointer" (click)="onLogout()">Logout</a></li>
+          <li *ngIf="isAuth$ | async"><a style="cursor: pointer" (click)="onLogout()">Logout</a></li> -->
       </ul>
   </div>
 </mat-toolbar>
