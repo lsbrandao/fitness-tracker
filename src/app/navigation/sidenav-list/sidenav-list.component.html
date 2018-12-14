@@ -3,6 +3,22 @@
       <mat-icon>home</mat-icon>
       <span class="nav-icons">Home</span>
   </a>
+  <a mat-list-item [routerLink]="['/signup']" (click)="onSidenavClose()">
+      <mat-icon>face</mat-icon>
+      <span class="nav-icons">Signup</span>
+  </a>
+  <a mat-list-item [routerLink]="['/login']" (click)="onSidenavClose()">
+      <mat-icon>how_to_reg</mat-icon>
+      <span class="nav-icons">Login</span>
+  </a>
+  <a mat-list-item [routerLink]="['/training']" (click)="onSidenavClose()">
+      <mat-icon>fitness_center</mat-icon>
+      <span class="nav-icons">Training</span>
+  </a>
+  <!-- <a mat-list-item [routerLink]="['']" (click)="onSidenavClose()">
+      <mat-icon>home</mat-icon>
+      <span class="nav-icons">Home</span>
+  </a>
   <a *ngIf="!(isAuth$ | async)" mat-list-item [routerLink]="['/signup']" (click)="onSidenavClose()">
       <mat-icon>face</mat-icon>
       <span class="nav-icons">Signup</span>
@@ -14,7 +30,7 @@
   <a *ngIf="isAuth$ | async" mat-list-item [routerLink]="['/training']" (click)="onSidenavClose()">
       <mat-icon>fitness_center</mat-icon>
       <span class="nav-icons">Training</span>
-  </a>
+  </a> -->
   <mat-list-item *ngIf="isAuth$ | async">
       <button mat-icon-button (click)="onLogout()">
           <mat-icon>eject</mat-icon>
